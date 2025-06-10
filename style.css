@@ -1,0 +1,59 @@
+:root {
+  --primario: #38bdf8;
+  --secundario: #0f172a;
+  --fundo: #1e293b;
+  --texto: #f1f5f9;
+  --cinza: #cbd5e1;
+  --fonte: 'Rajdhani', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:var(--fonte);color:var(--texto)}
+body {
+  background: linear-gradient(135deg,#1e293b 0%,#0f172a 100%);
+  background-image: radial-gradient(rgba(255,255,255,0.02) 1px,transparent 1px);
+  background-size:30px 30px;
+  line-height:1.6;
+  background-color: #273449;
+}
+/* Header */
+header{ text-align:center;padding:2rem;background:var(--secundario)}
+header .logo{width:100px}
+header h1{margin-top:1rem;font-size:2.5rem}
+header .subtitle{font-size:1.2rem;color:var(--cinza)}
+header .social-icons{margin-top:1rem;display:flex;justify-content:center;gap:1.5rem;font-size:1.6rem}
+header .social-icons a{color:var(--texto);transition:transform .3s,color .3s}
+header .social-icons a:hover{transform:scale(1.2);color:var(--primario)}
+section{padding:4rem 2rem}
+section h2{margin-bottom:1.5rem;font-size:2rem;color:var(--primario)}
+.quem-somos{display:grid;grid-template-columns:1fr 1fr;background:#273449;border-radius:8px;overflow:hidden}
+.quem-somos .text{padding:2rem}
+.quem-somos .image img{width:100%;object-fit:cover}
+.cards,.cards-grid,.depo-cards{display:grid;gap:1.5rem}
+.cards{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card,.proj-card,.depo-card {
+  background:rgba(30,41,59,0.6);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  overflow:hidden;
+  padding:1rem;
+  transition:transform .3s,box-shadow .3s;
+}
+.card:hover,.proj-card:hover,.depo-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 12px 30px rgba(0,255,255,0.3);
+}
+.card img,.proj-card img{width:100%;height:150px;object-fit:cover}
+.cards-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.proj-card .btn{display:inline-block;margin-top:.5rem;padding:.5rem 1rem;background:var(--primario);color:var(--secundario);text-decoration:none;border-radius:4px;transition:background .3s}
+.proj-card .btn:hover{background:var(--texto)}
+.depo-cards{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.depo-card{padding:2rem;font-style:italic;position:relative;color:var(--cinza)}
+.depo-card span{display:block;margin-top:1rem;text-align:right;font-weight:bold;color:var(--texto)}
+.contato form{display:grid;gap:1rem;max-width:600px;margin:0 auto 1rem}
+.contato input,.contato textarea{padding:.8rem;border:none;border-radius:4px;font-family:var(--fonte)}
+.contato button.btn{padding:.8rem 1.2rem;background:var(--primario);color:var(--secundario);border:none;border-radius:4px;font-size:1rem;cursor:pointer;transition:background .3s}
+.contato button.btn:hover{background:var(--texto);color:var(--secundario)}
+.contato-social a{font-size:1.4rem;margin:0 .5rem;color:var(--texto);transition:color .3s}
+.contato-social a:hover{color:var(--primario)}
+@media(max-width:768px){.quem-somos{grid-template-columns:1fr}}
